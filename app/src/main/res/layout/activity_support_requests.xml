@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    tools:context=".ui.helpAndSupport.activities.SupportRequestsActivity">
+
+    <RelativeLayout
+        android:id="@+id/rlToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        tools:ignore="UselessParent">
+
+        <RelativeLayout
+            android:id="@+id/rlBack"
+            android:layout_width="@dimen/_45sdp"
+            android:layout_height="?actionBarSize">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/back_arrow_ic" />
+
+            <Button
+                android:id="@+id/btnBack"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@color/transparent" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvUsername"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center_vertical"
+            android:fontFamily="@font/lato_black"
+            android:gravity="center"
+            android:text="Support Request"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            tools:ignore="HardcodedText" />
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rlToolbar"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:overScrollMode="never"
+        android:paddingHorizontal="@dimen/_8sdp"
+        android:paddingVertical="@dimen/_5sdp"
+        android:paddingTop="@dimen/_5sdp"
+        tools:itemCount="3"
+        tools:listitem="@layout/item_support_request" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animation_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rlToolbar"
+        android:layout_above="@+id/rlCreateRequest"
+        android:visibility="gone"
+        android:layout_margin="@dimen/_15sdp"
+        app:lottie_autoPlay="true"
+        app:lottie_fileName="no_doc.json"
+        app:lottie_loop="true" />
+
+
+    <RelativeLayout
+        android:id="@+id/rlCreateRequest"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_marginTop="@dimen/_11sdp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:visibility="gone"
+        android:layout_marginHorizontal="@dimen/_13sdp"
+        android:background="@drawable/bg_main_color_without_stroke_corner_10sdp">
+
+        <TextView
+            android:id="@+id/tv_create_request"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/lato_black"
+            android:text="Create Request"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_14"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:id="@+id/btnCreateRequest"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/layout_loader"
+        layout="@layout/loader_layout" />
+
+    <include
+        android:id="@+id/top_layout_loader"
+        layout="@layout/top_loader_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/rlToolbar"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp" />
+
+</RelativeLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/menu_copy"
+        android:icon="@drawable/ic_copy"
+        android:title="Copy"
+        tools:ignore="HardcodedText" />
+    <item android:id="@+id/menu_share"
+        android:icon="@drawable/ic_share"
+        android:title="Share"
+        tools:ignore="HardcodedText" />
+</menu>

@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    tools:context=".ui.settings.AccountSettingsActivity">
+
+    <RelativeLayout
+        android:id="@+id/rlToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize">
+
+        <RelativeLayout
+            android:layout_width="@dimen/_45sdp"
+            android:layout_height="?actionBarSize">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:src="@drawable/back_arrow"
+                tools:ignore="ContentDescription" />
+
+            <Button
+                android:id="@+id/btnBack"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@color/transparent" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/lato_black"
+            android:text="Account Settings"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_18"
+            tools:ignore="HardcodedText" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rlToolbar"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/_7sdp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_55"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@drawable/bg_ed_8dp_solid"
+            android:paddingHorizontal="@dimen/_10sdp">
+
+            <ImageView
+                android:id="@+id/imgEditProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:src="@drawable/account_setting_ic"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_toEndOf="@+id/imgEditProfile"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:fontFamily="@font/lato_bold"
+                android:gravity="center_vertical"
+                android:importantForAutofill="no"
+                android:paddingTop="@dimen/_2sdp"
+                android:text="Edit Profile"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_14"
+                tools:ignore="HardcodedText,LabelFor,RtlSymmetry" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_next"
+                tools:ignore="ContentDescription" />
+
+            <Button
+                android:id="@+id/btnEditProfile"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/transparent" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlChangePassword"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_55"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:background="@drawable/bg_ed_8dp_solid"
+            android:paddingHorizontal="@dimen/_10sdp">
+
+            <ImageView
+                android:id="@+id/imgChangePassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:src="@drawable/change_password_ic"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_toEndOf="@+id/imgChangePassword"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:fontFamily="@font/lato_bold"
+                android:gravity="center_vertical"
+                android:importantForAutofill="no"
+                android:paddingTop="@dimen/_2sdp"
+                android:text="Change Password"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_14"
+                tools:ignore="HardcodedText,LabelFor,RtlSymmetry" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_next"
+                tools:ignore="ContentDescription" />
+
+            <Button
+                android:id="@+id/btnChangePassword"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/transparent" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlSetPassword"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_55"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:visibility="gone"
+            android:background="@drawable/bg_ed_8dp_solid"
+            android:paddingHorizontal="@dimen/_10sdp">
+
+            <ImageView
+                android:id="@+id/imgSetPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:src="@drawable/change_password_ic"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_toEndOf="@+id/imgSetPassword"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:fontFamily="@font/lato_bold"
+                android:gravity="center_vertical"
+                android:importantForAutofill="no"
+                android:paddingTop="@dimen/_2sdp"
+                android:text="Set Password"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_14"
+                tools:ignore="HardcodedText,LabelFor,RtlSymmetry" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_next"
+                tools:ignore="ContentDescription" />
+
+            <Button
+                android:id="@+id/btnSetPassword"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/transparent" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_55"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:background="@drawable/bg_ed_8dp_solid"
+            android:paddingHorizontal="@dimen/_10sdp">
+
+            <ImageView
+                android:id="@+id/imgSignOut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:src="@drawable/delete_account_ic"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_toEndOf="@+id/imgSignOut"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:fontFamily="@font/lato_bold"
+                android:gravity="center_vertical"
+                android:importantForAutofill="no"
+                android:paddingTop="@dimen/_2sdp"
+                android:text="Delete Account"
+                android:textColor="@color/dark_red_color"
+                android:textSize="@dimen/text_14"
+                tools:ignore="HardcodedText,LabelFor,RtlSymmetry" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_next"
+                tools:ignore="ContentDescription" />
+
+            <Button
+                android:id="@+id/btnDeleteAccount"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/transparent" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <include
+        android:id="@+id/layout_loader"
+        layout="@layout/loader_layout" />
+
+</RelativeLayout>

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "354531526014",
+    "project_id": "kedvick-ai",
+    "storage_bucket": "kedvick-ai.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:354531526014:android:da9c822135a8991fd85f2f",
+        "android_client_info": {
+          "package_name": "com.kedvick.ai"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "354531526014-rorvbqobjbjp9kt7vscekmp9ta77l4gu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.kedvick.ai",
+            "certificate_hash": "636000c3427487af32d84ccf1622b0d11884b72c"
+          }
+        },
+        {
+          "client_id": "354531526014-pmmghrh30nmhi420evol6o3oe0n62rh7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB9EUAzMCDZ6l4NkXlkY1o4WnfsX4NBFVw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "354531526014-pmmghrh30nmhi420evol6o3oe0n62rh7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

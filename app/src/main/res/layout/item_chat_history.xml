@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_55"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:background="@drawable/bg_ed_8dp_solid"
+        android:layout_marginHorizontal="@dimen/_5sdp"
+        android:paddingStart="@dimen/_10sdp"
+        tools:ignore="RtlSymmetry">
+
+        <ImageView
+            android:id="@+id/imgMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:src="@drawable/chat_ic" />
+
+        <TextView
+            android:id="@+id/tvMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_toEndOf="@+id/imgMessage"
+            android:focusable="true"
+            android:layout_toStartOf="@+id/rlOptions"
+            android:singleLine="true"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:focusableInTouchMode="true"
+            android:fontFamily="@font/lato"
+            android:gravity="center_vertical"
+            android:importantForAutofill="no"
+            android:text="what is the future of ai?"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_14"
+            tools:ignore="HardcodedText,LabelFor,RtlSymmetry" />
+
+        <Button
+            android:id="@+id/btnChatHistory"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toStartOf="@+id/rlOptions"
+            android:background="@color/transparent" />
+
+
+        <RelativeLayout
+            android:id="@+id/rlOptions"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true">
+
+            <ImageView
+                android:id="@+id/ivRightArrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/horizontal_three_dots" />
+
+            <Button
+                android:id="@+id/btnOptions"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/transparent" />
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

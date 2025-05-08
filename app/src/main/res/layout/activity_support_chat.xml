@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    tools:context=".ui.helpAndSupport.activities.SupportChatActivity">
+
+    <RelativeLayout
+        android:id="@+id/rlToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        tools:ignore="UselessParent">
+
+        <RelativeLayout
+            android:id="@+id/rlClose"
+            android:layout_width="@dimen/_45sdp"
+            android:layout_height="?actionBarSize"
+            android:layout_alignParentEnd="true">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_baseline_close_24"
+                app:tint="@color/white"/>
+
+            <Button
+                android:id="@+id/btnClose"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@color/transparent" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvUsername"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center_vertical"
+            android:fontFamily="@font/lato_black"
+            android:gravity="center"
+            android:text="Support Chat"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            tools:ignore="HardcodedText" />
+
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rlSendLayout"
+        android:layout_below="@+id/rlToolbar"
+        android:overScrollMode="never"
+        android:paddingVertical="@dimen/_5sdp"
+        app:stackFromEnd="true" />
+
+    <RelativeLayout
+        android:id="@+id/rlSendLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/bg_fields"
+        android:elevation="@dimen/_5sdp"
+        android:paddingHorizontal="@dimen/_7sdp"
+        android:paddingVertical="@dimen/_8sdp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:layout_toStartOf="@+id/rlSend"
+            android:background="@drawable/bg_ed_8dp_border">
+
+            <EditText
+                android:id="@+id/edMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:layout_marginEnd="@dimen/_40sdp"
+                android:background="@color/transparent"
+                android:backgroundTint="@color/transparent"
+                android:fontFamily="@font/lato_regular"
+                android:hint="Type here message..."
+                android:maxLines="5"
+                android:minHeight="@dimen/_35sdp"
+                android:paddingVertical="@dimen/_5sdp"
+                android:paddingStart="@dimen/_10sdp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/hint_color"
+                android:textSize="12sp"
+                android:visibility="visible"
+                tools:ignore="HardcodedText,RtlSymmetry" />
+
+            <RelativeLayout
+                android:id="@+id/rlAttachment"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:elevation="@dimen/_5sdp"
+                android:paddingEnd="@dimen/_5sdp"
+                android:visibility="gone"
+                tools:ignore="RtlSymmetry">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_attachment" />
+
+                <Button
+                    android:id="@+id/btnAttachment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlSend"
+            android:layout_width="@dimen/_35sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/bg_send_12dp_round">
+
+            <ProgressBar
+                android:id="@+id/loadingSendMsg"
+                android:layout_width="@dimen/_16sdp"
+                android:layout_height="@dimen/_16sdp"
+                android:layout_centerInParent="true"
+                android:visibility="gone"
+                android:indeterminate="true"
+                android:indeterminateTintMode="src_atop"
+                android:indeterminateTint="@color/white"/>
+
+            <ImageView
+                android:id="@+id/ivSendMsg"
+                android:layout_width="@dimen/_14sdp"
+                android:layout_height="@dimen/_14sdp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/send_message_ic"
+                android:visibility="visible"
+                tools:ignore="ContentDescription" />
+
+            <Button
+                android:id="@+id/btnSendMessage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/layout_loader"
+        layout="@layout/loader_layout" />
+
+    <include
+        android:id="@+id/top_layout_loader"
+        layout="@layout/top_loader_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rlToolbar" />
+
+</RelativeLayout>

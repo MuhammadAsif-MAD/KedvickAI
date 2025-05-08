@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rlParent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/_7sdp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rlMyTextMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent">
+
+        <RelativeLayout
+            android:id="@+id/rlMyMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="@dimen/_65sdp"
+            android:layout_marginEnd="@dimen/_2sdp"
+            android:background="@drawable/chat_sender_bubble"
+            android:paddingStart="@dimen/_7sdp"
+            android:paddingTop="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:paddingEnd="@dimen/_14sdp"
+            android:paddingBottom="@dimen/_3sdp">
+
+            <RelativeLayout
+                android:id="@+id/rlAttachedMedia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/_3sdp"
+                android:visibility="visible">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/imgMessage"
+                    android:layout_width="143dp"
+                    android:layout_height="133dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/place_holder"
+                    android:visibility="gone"
+                    app:riv_corner_radius="@dimen/_8sdp"
+                    app:riv_border_color="@color/white"
+                    app:riv_border_width="1dp"/>
+
+                <RelativeLayout
+                    android:id="@+id/rlAttachedPdf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="42dp"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="@dimen/_5sdp"
+                    android:background="@drawable/bg_pdf_message"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:id="@+id/rlPdfView"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/bg_5dp_stroke_white_round">
+
+                        <ImageView
+                            android:id="@+id/imgPdf"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/_5sdp"
+                            android:src="@drawable/ic_add_red_pdf" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tvPdfName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/lato_medium"
+                        android:layout_marginStart="@dimen/_8sdp"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        android:layout_toEndOf="@+id/rlPdfView"
+                        android:text="KEDVIK.pdf"
+                        android:textColor="@color/black"
+                        android:textSize="10sp"
+                        tools:ignore="HardcodedText,SmallSp" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tvMsg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rlAttachedMedia"
+                android:fontFamily="@font/lato_regular"
+                android:paddingTop="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_10sdp"
+                android:paddingStart="@dimen/_2sdp"
+                android:layout_alignStart="@+id/rlAttachedMedia"
+                android:text="what is the future of ai?"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:visibility="visible"
+                tools:ignore="HardcodedText,RtlSymmetry" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rlMyMessage"
+            android:layout_alignEnd="@+id/rlMyMessage"
+            android:layout_gravity="end"
+            android:layout_marginTop="1.2dp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:fontFamily="@font/lato_medium"
+            android:text="09:29 PM"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            android:visibility="gone"
+            tools:ignore="HardcodedText,SmallSp" />
+
+    </RelativeLayout>
+
+</LinearLayout>

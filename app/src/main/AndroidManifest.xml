@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="com.android.vending.BILLING" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission
+        android:name="android.permission.READ_MEDIA_IMAGES"
+        tools:ignore="SelectedPhotoAccess" />
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32"
+        android:required="true" />
+
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:required="true"
+        android:maxSdkVersion="28" />
+
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.SEND" />
+
+            <data android:mimeType="text/plain" />
+        </intent>
+    </queries>
+
+    <application
+        android:name=".api.ApplicationClass"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Kedvick"
+        tools:targetApi="31">
+        <activity
+            android:name=".ui.textToSpeech.activities.TextToSpeechDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.auth.activities.SocialLoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.auth.activities.OnBoardingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.auth.activities.ResetPasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.auth.activities.SignInActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.auth.activities.SignUpActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.auth.activities.ForgotPasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.auth.activities.AccountVerificationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.createImage.activities.ArtImagePreviewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.createImage.activities.CreateArtActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.dashboard.activities.DashboardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.researchCenter.activities.ChatActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.researchCenter.activities.ChatHistoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.researchCenter.activities.PdfViewerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.contactus.ContactUsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.textToSpeech.activities.ImagePreviewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.textToSpeech.activities.ListOfAvailableSpeechActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.textToSpeech.activities.TextToSpeechActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.settings.SettingsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.settings.WebViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.settings.AccountSettingsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.settings.ChangePasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.settings.DeleteAccountActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.settings.EditProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.settings.inviteFriends.activities.ContactsListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.settings.inviteFriends.activities.InviteFriendsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.settings.SetPasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.settings.TermsAndPrivacyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.helpAndSupport.activities.CreateReportActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.helpAndSupport.activities.CreateSupportActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.helpAndSupport.activities.FaqsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.helpAndSupport.activities.HelpAndSupportActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.helpAndSupport.activities.MyReportsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.helpAndSupport.activities.SupportChatActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.helpAndSupport.activities.SupportDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.helpAndSupport.activities.SupportRequestsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.auth.activities.SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

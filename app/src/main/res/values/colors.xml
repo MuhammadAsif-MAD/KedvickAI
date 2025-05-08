@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="grey">#a9a9a9</color>
+
+
+    <color name="pink">#C903F4</color>
+
+    <color name="white_10">#10FFFFFF</color>
+    <color name="white_12">#12FFFFFF</color>
+    <color name="white_80">#80FFFFFF</color>
+    <color name="white_75">#75FFFFFF</color>
+    <color name="white_70">#70FFFFFF</color>
+    <color name="black_30">#30181818</color>
+    <color name="white_22">#2C2831</color>
+    <color name="white_98">#98FFFFFF</color>
+    <color name="white_90">#90FFFFFF</color>
+    <color name="white_35">#35FFFFFF</color>
+    <color name="white_40">#40FFFFFF</color>
+    <color name="white_30">#30FFFFFF</color>
+    <color name="white_50">#50FFFFFF</color>
+    <color name="white_60">#60FFFFFF</color>
+    <color name="white_15">#25FFFFFF</color>
+    <color name="stroke_12">#12B8B8B8</color>
+    <color name="light_green">#13D6AD</color>
+    <color name="hint_color">#50FFFFFF</color>
+    <color name="round_stroke_color_">#B2B2B2</color>
+    <color name="background_color">#0C041A</color>
+    <color name="stroke_color">#6A6A6A</color>
+    <color name="red_color">#FF2424</color>
+    <color name="dark_red_color">#FC2C2C</color>
+    <color name="deep_orange_500">#FF5722</color>
+    <color name="grey_3">#f7f7f7</color>
+    <color name="transparent">#00000000</color>
+    <color name="shimmer_color">#CECFD2</color>
+
+    <color name="app_color">#011321</color>
+    <color name="txt_color">#191919</color>
+    <color name="bg_fields">#00000F</color>
+    <color name="green_10">#1013D6AD</color>
+    <color name="green_20">#2013D6AD</color>
+    <color name="grey_20">#cccccc</color>
+    <color name="grey_40">#999999</color>
+    <color name="blue_500">#2196F3</color>
+    <color name="popup_color">#2A2A2A</color>
+    <color name="grey_60">#666666</color>
+
+    <color name="blue_600">#1E88E5</color>
+    <color name="yellow_700">#FBC02D</color>
+    <color name="pink_700">#C2185B</color>
+    <color name="green_600">#43A047</color>
+    <color name="grey_80">#37474F</color>
+    <color name="red_700">#D32F2F</color>
+    <color name="cyan_500">#00BCD4</color>
+    <color name="grey_10">#e6e6e6</color>
+
+
+</resources>

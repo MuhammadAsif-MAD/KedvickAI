@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rlMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    tools:context=".ui.researchCenter.activities.ChatActivity">
+
+    <ImageView
+        android:id="@+id/ivBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rlSendMessage"
+        android:layout_below="@+id/rlToolbar"
+        android:scaleType="centerCrop"
+        tools:ignore="ContentDescription" />
+
+    <RelativeLayout
+        android:id="@+id/rlToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/background_color">
+
+        <RelativeLayout
+            android:id="@+id/rlBack"
+            android:layout_width="@dimen/_45sdp"
+            android:layout_height="?actionBarSize">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:src="@drawable/back_arrow"
+                tools:ignore="ContentDescription" />
+
+            <Button
+                android:id="@+id/btnBack"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@color/transparent" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/lato_black"
+            android:text="Research Center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_18"
+            tools:ignore="HardcodedText" />
+
+<!--        <RelativeLayout-->
+<!--            android:id="@+id/rlOptions"-->
+<!--            android:layout_width="@dimen/_45sdp"-->
+<!--            android:layout_height="?actionBarSize"-->
+<!--            android:layout_alignParentEnd="true">-->
+
+<!--            <ImageView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_alignParentEnd="true"-->
+<!--                android:layout_centerVertical="true"-->
+<!--                android:layout_marginEnd="@dimen/_10sdp"-->
+<!--                android:rotation="90"-->
+<!--                android:src="@drawable/horizontal_three_dots"-->
+<!--                tools:ignore="ContentDescription" />-->
+
+<!--            <Button-->
+<!--                android:id="@+id/btnOption"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:background="@color/transparent"-->
+<!--                tools:ignore="RelativeOverlap" />-->
+
+<!--        </RelativeLayout>-->
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rlSendMessage"
+        android:layout_below="@+id/rlToolbar"
+        android:overScrollMode="never" />
+
+    <LinearLayout
+        android:id="@+id/rlSendMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/bg_fields"
+        android:elevation="@dimen/_5sdp"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/_7sdp"
+        android:paddingVertical="@dimen/_8sdp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="UselessParent">
+
+            <RelativeLayout
+                android:id="@+id/rlAttachedMedia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/rlEditMessage"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:background="@drawable/bg_attached_image"
+                android:gravity="center_vertical"
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:id="@+id/rlAttachedImage"
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:layout_centerVertical="true"
+                    android:visibility="gone">
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:id="@+id/imgMessage"
+                        android:layout_width="62dp"
+                        android:layout_height="62dp"
+                        android:layout_centerInParent="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/place_holder"
+                        app:riv_border_color="@color/white_75"
+                        app:riv_border_width="1dp"
+                        app:riv_corner_radius="8dp" />
+
+                    <RelativeLayout
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_margin="@dimen/_8sdp">
+
+                        <RelativeLayout
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_alignParentEnd="true">
+
+                            <View
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:layout_centerInParent="true"
+                                android:background="@drawable/bg_cross_rounded" />
+
+                            <ImageView
+                                android:layout_width="8dp"
+                                android:layout_height="8dp"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/ic_close_media"
+                                app:tint="@color/black"
+                                tools:ignore="ContentDescription" />
+
+                        </RelativeLayout>
+
+                        <Button
+                            android:id="@+id/btnRemoveAttachedImage"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/transparent" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlAttachedPdf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:paddingVertical="@dimen/_5sdp"
+                    android:paddingStart="@dimen/_8sdp"
+                    android:visibility="gone"
+                    tools:ignore="RtlSymmetry">
+
+                    <RelativeLayout
+                        android:id="@+id/rlPdfView"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/bg_5dp_stroke_white_round">
+
+                        <ImageView
+                            android:id="@+id/imgPdf"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/_5sdp"
+                            android:src="@drawable/ic_add_red_pdf"
+                            tools:ignore="ContentDescription" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tvPdfName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/_8sdp"
+                        android:layout_toEndOf="@+id/rlPdfView"
+                        android:fontFamily="@font/lato_medium"
+                        android:text="KEDVICK.pdf"
+                        android:textColor="@color/white_90"
+                        android:textSize="10sp"
+                        tools:ignore="HardcodedText" />
+
+                    <RelativeLayout
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@+id/tvPdfName">
+
+
+                        <View
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/bg_cross_rounded" />
+
+                        <ImageView
+                            android:layout_width="8dp"
+                            android:layout_height="8dp"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/ic_close_media"
+                            app:tint="@color/black"
+                            tools:ignore="ContentDescription" />
+
+                        <Button
+                            android:id="@+id/btnRemoveAttachedPdf"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/transparent" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlAttachment"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_alignBottom="@+id/rlEditMessage"
+                android:layout_alignParentStart="true"
+                android:background="@drawable/bg_attached_image"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/ivAttachment"
+                    android:layout_width="@dimen/_14sdp"
+                    android:layout_height="@dimen/_14sdp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_attachment"
+                    android:visibility="visible"
+                    app:tint="@color/white_75"
+                    tools:ignore="ContentDescription" />
+
+                <Button
+                    android:id="@+id/btnAttachment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlEditMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rlAttachedMedia"
+                android:layout_marginHorizontal="@dimen/_5sdp"
+                android:layout_toStartOf="@+id/rlSend"
+                android:layout_toEndOf="@+id/rlAttachment"
+                android:background="@drawable/bg_attached_image">
+
+                <EditText
+                    android:id="@+id/edMessage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/transparent"
+                    android:backgroundTint="@color/transparent"
+                    android:fontFamily="@font/lato_regular"
+                    android:hint="Ask something..."
+                    android:inputType="textCapSentences|textMultiLine"
+                    android:maxLines="7"
+                    android:minHeight="@dimen/_35sdp"
+                    android:paddingVertical="@dimen/_5sdp"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:paddingEnd="@dimen/_8sdp"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/hint_color"
+                    android:textSize="12sp"
+                    android:visibility="visible"
+                    tools:ignore="HardcodedText,RtlSymmetry" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlSend"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_alignBottom="@+id/rlEditMessage"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/bg_send_12dp_round">
+
+                <ProgressBar
+                    android:id="@+id/loadingSendMsg"
+                    android:layout_width="@dimen/_16sdp"
+                    android:layout_height="@dimen/_16sdp"
+                    android:layout_centerInParent="true"
+                    android:indeterminate="true"
+                    android:indeterminateTint="@color/white"
+                    android:indeterminateTintMode="src_atop"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/ivSendMsg"
+                    android:layout_width="@dimen/_18sdp"
+                    android:layout_height="@dimen/_18sdp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/microphone_ic"
+                    android:visibility="visible"
+                    tools:ignore="ContentDescription" />
+
+                <Button
+                    android:id="@+id/btnSendMessage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <include
+        android:id="@+id/layout_loader"
+        layout="@layout/loader_layout" />
+
+    <include
+        android:id="@+id/top_layout_loader"
+        layout="@layout/top_loader_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rlToolbar"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

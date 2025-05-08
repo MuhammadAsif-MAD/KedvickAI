@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rlParent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/_7sdp"
+    android:background="@color/transparent"
+    android:orientation="horizontal"
+    android:paddingStart="@dimen/_5sdp"
+    tools:ignore="RtlSymmetry">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivAppLogo"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:layout_marginEnd="@dimen/_2sdp"
+        android:background="@drawable/bg_red_circle"
+        android:padding="1dp"
+        android:src="@drawable/place_holder"
+        app:civ_border_color="@color/app_color"
+        app:civ_border_width="1dp" />
+
+    <RelativeLayout
+        android:id="@+id/rlOtherTextMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_2sdp">
+
+        <RelativeLayout
+            android:id="@+id/rlMsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_3sdp"
+            android:layout_marginEnd="@dimen/_55sdp"
+            android:background="@drawable/chat_receiver_bubble"
+            android:paddingStart="@dimen/_3sdp"
+            android:paddingTop="@dimen/_2sdp"
+            android:paddingEnd="@dimen/_10sdp"
+            android:paddingBottom="@dimen/_3sdp">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/imgMessage"
+                android:layout_width="@dimen/_120sdp"
+                android:layout_height="@dimen/_100sdp"
+                android:layout_below="@id/tvMsg"
+                android:scaleType="centerCrop"
+                android:src="@drawable/place_holder"
+                android:visibility="gone"
+                app:riv_corner_radius_bottom_right="@dimen/_8sdp"
+                app:riv_corner_radius_top_left="@dimen/_8sdp"
+                app:riv_corner_radius_top_right="@dimen/_8sdp" />
+
+            <TextView
+                android:id="@+id/tvMsg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/imgMessage"
+                android:layout_marginEnd="@dimen/_7sdp"
+                android:fontFamily="@font/lato_regular"
+                android:paddingVertical="@dimen/_10sdp"
+                android:paddingStart="@dimen/_8sdp"
+                android:text="what is the future of ai?"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:visibility="visible"
+                tools:ignore="HardcodedText" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/success_animation"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_gravity="center_horizontal"
+                android:padding="@dimen/_5sdp"
+                android:scaleType="centerCrop"
+                android:visibility="gone"
+                app:lottie_autoPlay="true"
+                app:lottie_colorFilter="@color/white"
+                app:lottie_fileName="typing.json"
+                app:lottie_loop="true" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rlMsg"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginTop="1.5dp"
+            android:fontFamily="@font/lato_regular"
+            android:text="09:29 PM"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            android:visibility="gone"
+            tools:ignore="HardcodedText,SmallSp" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>
