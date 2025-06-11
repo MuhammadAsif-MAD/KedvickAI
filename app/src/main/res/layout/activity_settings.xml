@@ -377,6 +377,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/height_55"
                 android:layout_marginTop="@dimen/_7sdp"
+                android:visibility="gone"
                 android:background="@drawable/bg_ed_8dp_solid"
                 android:paddingHorizontal="@dimen/_10sdp">
 

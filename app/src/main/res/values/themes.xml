@@ -1,7 +1,7 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
 
-    <style name="Base.Theme.Kedvick" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <style name="Base.Theme.kedvik" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary colors -->
         <item name="colorPrimary">@color/background_color</item>
         <item name="colorPrimaryVariant">@color/background_color</item>
@@ -22,7 +22,7 @@
         <item name="android:windowDrawsSystemBarBackgrounds">true</item>
     </style>
 
-    <style name="Theme.Kedvick" parent="Base.Theme.Kedvick" />
+    <style name="Theme.kedvik" parent="Base.Theme.kedvik" />
 
     <style name="CustomDialog" parent="android:Theme.Dialog">
         <item name="android:windowIsTranslucent">true</item>

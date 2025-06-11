@@ -29,7 +29,7 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:layout_centerHorizontal="true"
-            android:text="Ask-Buddy"
+            android:text="KEDVIK"
             android:textColor="@color/white"
             android:textSize="@dimen/_18sdp"
             tools:ignore="HardcodedText" />

@@ -11,6 +11,7 @@ appcompat = "1.7.0"
 material = "1.12.0"
 activity = "1.10.1"
 constraintlayout = "2.2.1"
+playServicesAuthVersion = "21.3.0"
 sdpAndroid = "1.1.1"
 shimmer = "0.5.0"
 sspAndroid = "1.1.0"
@@ -21,7 +22,7 @@ loggingInterceptor = "4.12.0"
 gson = "2.10.1"
 cookiebar2 = "1.1.5"
 lifecycleExtensions = "2.2.0"
-lifecycleViewmodelKtx = "2.8.7"
+lifecycleViewmodelKtx = "2.9.0"
 hiltAndroid = "2.51.1"
 glide = "4.16.0"
 glideTransformations = "4.3.0"
@@ -33,8 +34,8 @@ prettytime = "4.0.4.Final"
 otpview = "v1.1.2-ktx"
 imageSupport = "2.0.0"
 circleimageview = "3.1.0"
-firebaseAuthKtx = "23.0.0"
-firebaseBom = "33.1.2"
+firebaseAuthKtx = "23.2.1"
+firebaseBom = "33.14.0"
 roundedimageview = "2.3.0"
 pickitVersion = "2.0.5"
 lottie = "6.4.0"
@@ -50,7 +51,7 @@ zoomage = "1.3.1"
 materialSpinner = "1.3.1"
 firebaseMessagingKtx = "24.1.1"
 firebaseMessaging = "24.1.1"
-playServicesAuth = "21.1.1"
+playServicesAuth = "21.3.0"
 
 
 
@@ -58,6 +59,7 @@ playServicesAuth = "21.1.1"
 amplituda = { module = "com.github.lincollincol:amplituda", version.ref = "amplituda" }
 amplituda-v220 = { module = "com.github.lincollincol:amplituda", version.ref = "amplitudaVersion" }
 massoudss-waveformseekbar = { module = "com.github.massoudss:waveformSeekBar", version.ref = "waveformseekbarVersion" }
+play-services-auth-v2100 = { module = "com.google.android.gms:play-services-auth", version.ref = "playServicesAuthVersion" }
 shimmer = { module = "com.facebook.shimmer:shimmer", version.ref = "shimmer" }
 viewpagerindicator = { module = "com.github.zhpanvip:viewpagerindicator", version.ref = "viewpagerindicator" }
 sdp-android = { module = "com.intuit.sdp:sdp-android", version.ref = "sdpAndroid" }

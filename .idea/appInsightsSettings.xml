@@ -4,13 +4,27 @@
     <option name="selectedTabId" value="Android Vitals" />
     <option name="tabSettings">
       <map>
+        <entry key="Android Vitals">
+          <value>
+            <InsightsFilterSettings>
+              <option name="connection">
+                <ConnectionSetting>
+                  <option name="appId" value="com.kedvik.ai" />
+                </ConnectionSetting>
+              </option>
+              <option name="signal" value="SIGNAL_UNSPECIFIED" />
+              <option name="timeIntervalDays" value="SEVEN_DAYS" />
+              <option name="visibilityType" value="ALL" />
+            </InsightsFilterSettings>
+          </value>
+        </entry>
         <entry key="Firebase Crashlytics">
           <value>
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="com.kedvick.ai" />
-                  <option name="mobileSdkAppId" value="1:354531526014:android:da9c822135a8991fd85f2f" />
+                  <option name="appId" value="com.kedvik.ai" />
+                  <option name="mobileSdkAppId" value="1:354531526014:android:fd05c0184d066672d85f2f" />
                   <option name="projectId" value="kedvick-ai" />
                   <option name="projectNumber" value="354531526014" />
                 </ConnectionSetting>

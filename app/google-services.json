@@ -7,17 +7,17 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:354531526014:android:da9c822135a8991fd85f2f",
+        "mobilesdk_app_id": "1:354531526014:android:fd05c0184d066672d85f2f",
         "android_client_info": {
-          "package_name": "com.kedvick.ai"
+          "package_name": "com.kedvik.ai"
         }
       },
       "oauth_client": [
         {
-          "client_id": "354531526014-rorvbqobjbjp9kt7vscekmp9ta77l4gu.apps.googleusercontent.com",
+          "client_id": "354531526014-n1qprdcmeck3hdm9a53fj6ov1gjslgk5.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.kedvick.ai",
+            "package_name": "com.kedvik.ai",
             "certificate_hash": "636000c3427487af32d84ccf1622b0d11884b72c"
           }
         },

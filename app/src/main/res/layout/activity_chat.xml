@@ -206,7 +206,7 @@
                         android:layout_marginStart="@dimen/_8sdp"
                         android:layout_toEndOf="@+id/rlPdfView"
                         android:fontFamily="@font/lato_medium"
-                        android:text="KEDVICK.pdf"
+                        android:text="kedvik.pdf"
                         android:textColor="@color/white_90"
                         android:textSize="10sp"
                         tools:ignore="HardcodedText" />

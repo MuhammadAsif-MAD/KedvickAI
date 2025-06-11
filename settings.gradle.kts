@@ -20,6 +20,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Kedvick"
+rootProject.name = "Kedvik"
 include(":app")
  

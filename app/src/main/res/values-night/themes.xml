@@ -1,10 +1,19 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.Kedvick" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="Base.Theme.kedvik" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your dark theme here. -->
         <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
 
         <item name="android:windowDisablePreview">true</item>
+
+        <!-- System bars -->
+        <item name="android:statusBarColor">@color/background_color</item>
+        <item name="android:navigationBarColor">@color/background_color</item>
+
+        <!-- Optional for dark navigation icons (use false if background is dark) -->
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowLightNavigationBar" tools:ignore="NewApi">false</item>
+
 
     </style>
 </resources>
